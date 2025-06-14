@@ -11,6 +11,11 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
+/* You can define in your global styles or just apply manually */
+.input {
+  @apply w-full px-4 py-3 rounded-md border text-black placeholder-gray-600 border-gray-300 focus:outline-none focus:ring-2
+   focus:ring-blue-500 focus:border-transparent;
+}
 
 @media (prefers-color-scheme: dark) {
   :root {

@@ -48,7 +48,7 @@ const AboutPreview = () => {
                   <div key={index} className="flex items-start space-x-3">
                     <stat.icon className={`mt-1 ${stat.color} flex-shrink-0`} />
                     <div>
-                      <h2 className="font-semibold">{stat.value}</h2>
+                      <h2 className="font-semibold text-black">{stat.value}</h2>
                       <p className="text-sm text-gray-600">{stat.label}</p>
                     </div>
                   </div>
