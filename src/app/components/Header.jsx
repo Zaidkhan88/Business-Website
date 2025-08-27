@@ -5,7 +5,19 @@ import Image from 'next/image';
 
 const navLinks = [
   { name: 'Home', path: '/' },
-  { name: 'About Us', path: '/about' },
+  { 
+    name: 'About Us', 
+    path: '/about',
+    dropdown: [
+      
+      { name: 'Who We Are', path: '/about#who-we-are' },
+      { name: 'Vision & Mission', path: '/about#mission' },
+      { name: 'What We Offer', path: '/about#what-we-offer' },
+      { name: 'Why Choose Us', path: '/about#why-choose-us' },
+      { name: 'Our Promise', path: '/about#our-promise' },
+    ],
+  },
+  { name: 'Products', path: '/products' },
   // { name: 'Contact', path: '/contact' },
 ];
 
@@ -27,17 +39,31 @@ const Header = () => {
 
         {/* Desktop Nav + CTA */}
         <div className="hidden md:flex items-center space-x-8">
-          <nav className="flex space-x-6">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.path}
-                className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
-              >
-                {link.name}
-              </Link>
-            ))}
-          </nav>
+          <nav className="flex space-x-6 relative">
+  {navLinks.map((link) => (
+    <div key={link.name} className="group relative">
+      <Link
+        href={link.path}
+        className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+      >
+        {link.name}
+      </Link>
+      {link.dropdown && (
+        <div className="absolute left-0 mt-2 w-48 bg-white border rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition">
+          {link.dropdown.map((sublink) => (
+            <Link
+              key={sublink.name}
+              href={sublink.path}
+              className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+            >
+              {sublink.name}
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
+  ))}
+</nav>
           <a href="mailto:akvalves.sales@gmail.com" className="text-gray-700 hover:text-blue-600">
       <Mail className="w-5 h-5" />
     </a>

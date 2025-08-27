@@ -1,11 +1,20 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { Menu, X, Phone } from 'lucide-react';
 
 const MobileMenu = ({ navLinks }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const router = useRouter();
+
+  const handleNav = (path) => {
+    setMenuOpen(false);
+    setTimeout(() => {
+      router.push(path);
+    }, 200); // small delay for closing animation
+  };
 
   return (
     <>
@@ -17,7 +26,6 @@ const MobileMenu = ({ navLinks }) => {
         {menuOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
 
-      {/* Mobile Menu (Slide-in Animation) */}
       <div
         className={`md:hidden fixed inset-0 bg-white z-40 transform ${
           menuOpen ? 'translate-x-0' : '-translate-x-full'
@@ -26,15 +34,15 @@ const MobileMenu = ({ navLinks }) => {
       >
         <div className="px-6 py-4 space-y-4">
           {navLinks.map((link) => (
-            <Link
+            <button
               key={link.name}
-              href={link.path}
-              onClick={() => setMenuOpen(false)}
-              className="block py-2 text-gray-700 hover:text-blue-600 font-medium"
+              onClick={() => handleNav(link.path)}
+              className="block py-2 text-gray-700 hover:text-blue-600 font-medium text-left w-full"
             >
               {link.name}
-            </Link>
+            </button>
           ))}
+
           <div className="pt-4 border-t border-gray-200">
             <a
               href="tel:+919987972131"
@@ -42,12 +50,12 @@ const MobileMenu = ({ navLinks }) => {
             >
               <Phone size={16} className="mr-2" /> Call Us
             </a>
-            <Link
-              href="/contact"
-              className="block mt-2 bg-blue-600 text-white text-center py-2 rounded-md font-medium"
+            <button
+              onClick={() => handleNav('/contact')}
+              className="block mt-2 bg-blue-600 text-white text-center py-2 rounded-md font-medium w-full"
             >
               Request Quote
-            </Link>
+            </button>
           </div>
         </div>
       </div>

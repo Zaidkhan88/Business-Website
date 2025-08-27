@@ -1,18 +1,7 @@
 import Link from 'next/link';
 import { Check, Factory, Globe, Shield } from 'lucide-react';
 
-export const metadata = {
-  title: 'About AK Valves | Trusted Industrial Valve Supplier Since 2005',
-  description: 'AK Valves supplies premium industrial valves to oil & gas, power plants, and chemical industries across India. 10,000+ valves supplied to 200+ clients nationwide.',
-  keywords: [
-    'industrial valves',
-    'valve supplier India',
-    'ball valves',
-    'gate valves',
-    'butterfly valves',
-    'Mumbai valve company'
-  ],
-};
+
 
 const AboutPreview = () => {
   const industries = ['Oil & Gas', 'Power Plants', 'Water Treatment', 'Chemicals', 'Pharma', 'Marine'];
