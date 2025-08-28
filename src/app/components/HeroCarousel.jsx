@@ -9,8 +9,14 @@ import 'swiper/css';
 import 'swiper/css/autoplay';
 
 const slides = [
-  "/images/image6.jpg",
-  "/images/image7.jpg",
+  "/images/image-valve-1.jpg",
+  "/images/image-valve-2.jpg",
+  "/images/image-valve-3.png",
+  "/images/image-valve-4.png",
+  "/images/image-valve-5.png",
+  "/images/image-valve-6.png",
+
+  // "/images/image7.jpg",
   "/images/image8.jpg",
   "/images/image9.png",
   // Add more images here

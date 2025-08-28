@@ -1,4 +1,5 @@
 "use client";
+import toast, { Toaster } from "react-hot-toast";
 
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
@@ -31,11 +32,34 @@ const handleChange = (e) => {
     setLoading(true);
 
     // Simulate API call
-    setTimeout(() => {
-      setLoading(false);
-      setSubmitted(true);
-      setFormData({ name: "", email: "", phone: "", message: "" });
-    }, 1500);
+    try {
+      const res = await fetch('/api/quote', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await res.json();
+
+      if (result.success) {
+        toast.success("Quote sent successfully!");
+        form.reset();
+      } else {
+        toast.error("Failed to send quote.");
+      }
+    } catch (err) {
+      console.error(err);
+      toast.error("Something went wrong. Please try again.");
+    } finally {
+            setSubmitted(true);
+            setFormData({ name: "", email: "", phone: "", message: "" });
+            setLoading(false);
+    }
+    // setTimeout(() => {
+      
+    //   setSubmitted(true);
+      
+    // }, 1500);
   };
 
   return (
