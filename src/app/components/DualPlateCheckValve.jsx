@@ -12,7 +12,7 @@ import Link from "next/link";
 //     "ball valve, fire safe ball valve, cryogenic ball valve, API 607, API 6FA, soft seated ball valve, metal seated ball valve, 3 way ball valve, 4 way ball valve",
 // };
 
-export default function CheckValvesPage() {
+export default function DualPlateCheckValvesComp() {
   const [activeTab, setActiveTab] = useState("features");
    const categories = [
    { name: "Ball Valves", href: "/products/ball-valves" },
@@ -38,8 +38,8 @@ export default function CheckValvesPage() {
         {/* Product Image */}
         <div className="mb-6">
           <Image
-            src="/images/swing-check-valve-1.png"
-            alt="Check Valve"
+            src="/images/dual-plate-check-valve-1.png"
+            alt="Dual Plate Check Valve"
             width={400}
             height={400}
             className="rounded shadow object-contain"
@@ -47,9 +47,9 @@ export default function CheckValvesPage() {
         </div>
 
         {/* Title */}
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">CHECK VALVES</h1>
+        <h1 className="text-3xl font-bold text-gray-900 mb-2">DUAL PLATE CHECK VALVES</h1>
         <h2 className="text-xl font-semibold text-blue-700 mb-6">
-          (BOLTED BONNET & PRESSURE SEAL COVER)
+          (SOFT SEATED & METAL SEATED)
         </h2>
 
         {/* Tabs */}
@@ -81,18 +81,20 @@ export default function CheckValvesPage() {
           <ul className="list-disc pl-6 space-y-2 ">
 
 
-            <li>Size: 1/2″ – 36″ (15NB – 500NB)</li>
+            <li>Size: 1/2″ – 12″ (15NB – 300NB)</li>
             <li>Class: 150#-2500#</li>
             <li>
-              CS / SS / Alloys / Monel / Hastalloys / Bronze MOC
+              CS / CI / SS / Alloys / Monel / Hastalloys Steel / Bronze MOC
             </li>
-            <li>Non Slam arrangement on request</li>
+            <li>Self Operated</li>
             <li>
-              Wafer Type / Ball Type / Piston Type / Spring Loaded
+              Multi Door
             </li>
+            <li>Spring Loaded / Retainer Less</li>
             <li>Metal to Metal and Metal to soft seat</li>
             <li>Rubber Lining on request</li>
             
+
           </ul>
         )}
 
@@ -101,18 +103,18 @@ export default function CheckValvesPage() {
           <div className="overflow-x-auto">
             <ul className="list-disc pl-6 space-y-2 ">
               <li>
-                <b>Design : </b>ASME B16.34 / BS 1868
+                <b>Design : </b> API 6D / API 594
               </li>
               <li>
-                <b>Face to Face : </b>ASME B16.10 / DIN IS / BS
+                <b>Face to Face : </b>API 6D / API 594
               </li>
               <li>
-                <b>End to End : </b>BW Type / Flanged End / RTJ
+                <b>End to End : </b>Wafer Type / Flanged
               </li>
-              <li>
+              {/* <li>
                 <b>Pressure -Temperature Rating :</b> ASTM B 16.34
-              </li>
               <li>
+              </li>
                 <b>Screwed End Dimension : </b>ASTM B 1.20.1
               </li>
               <li>
@@ -122,8 +124,8 @@ export default function CheckValvesPage() {
                 <b>Test : </b>API 598 / BS 6755
               </li>
               <li>
-                <b>Special : </b>NACE MR-01-75 / 0103
-              </li>
+                <b>Fire Safe : </b>NACE MR-01-75 / 0103
+              </li> */}
               
             </ul>
           </div>
@@ -160,7 +162,7 @@ export default function CheckValvesPage() {
       </section>
 
       {/* Right Sidebar */}
-       <aside className="bg-gray-50 border rounded-lg p-4 shadow-sm">
+       <aside className="  rounded-lg p-4 shadow-sm">
           <h3 className="text-lg font-semibold mb-4">Other Valves</h3>
           <nav className="space-y-2">
             {categories.map((cat) => (
@@ -168,7 +170,7 @@ export default function CheckValvesPage() {
                 key={cat.name}
                 href={cat.href}
                 className={`block px-4 py-2 rounded-md font-medium ${
-                  cat.name === "Swing Check Valves"
+                  cat.name === "Dual Plate Check Valves"
                     ? "bg-blue-600 text-white"
                     : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                 }`}

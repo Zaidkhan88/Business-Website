@@ -3,8 +3,12 @@ import Image from 'next/image';
 
 
 // Server-rendered product card (no interactivity)
+
+import Link from 'next/link';
+
 const ProductCard = ({ product }) => (
-  <article className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow">
+  <article className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow flex flex-col">
+    {/* Image */}
     <div className="bg-gray-50 p-4 h-48 flex items-center justify-center">
       <Image
         src={product.image}
@@ -12,11 +16,11 @@ const ProductCard = ({ product }) => (
         width={280}
         height={200}
         className="h-full object-contain"
-        priority={false}
       />
     </div>
     
-    <div className="p-5">
+    {/* Content */}
+    <div className="p-5 flex flex-col flex-1">
       <h3 className="text-xl font-semibold text-gray-900 mb-2">
         {product.name}
       </h3>
@@ -32,33 +36,49 @@ const ProductCard = ({ product }) => (
           </div>
         ))}
       </dl>
-      
-      <div className="pt-4 border-t border-gray-100">
+
+      <div className="pt-4 border-t border-gray-100 flex-1 flex flex-col">
         <h4 className="text-xs font-semibold text-gray-500 uppercase mb-2">
           Typical Applications
         </h4>
-        <ul className="flex flex-wrap gap-2">
+        <ul className="flex flex-wrap gap-2 mb-6">
           {product.applications.map((app) => (
-            <li key={app} className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+            <li
+              key={app}
+              className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800"
+            >
               {app}
             </li>
           ))}
         </ul>
-        <Link
+
+        {/* Buttons pinned at bottom */}
+        <div className="mt-auto flex gap-3">
+          <Link
             href="/contact"
-            className="inline-block mt-6 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg font-medium transition-colors duration-200 shadow-sm"
+            className="flex-1 text-center bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg font-medium transition-colors duration-200 shadow-sm"
           >
             Request a Quote
           </Link>
-
+          {product.slug && (
+          <Link
+            href={`/products/${product.slug}`}
+            className="flex-1 text-center bg-gray-200 hover:bg-gray-300 text-gray-800 px-5 py-2.5 rounded-lg font-medium transition-colors duration-200 shadow-sm"
+          >
+            View Details
+          </Link>
+          )}
+          
+        </div>
       </div>
     </div>
   </article>
 );
 
+
 // Client component ONLY for interactive filters
 import FilterControls from './FilterControls';
-import Link from 'next/link';
+
 
 // Main server component
 export default async function ProductRange() {
@@ -66,6 +86,7 @@ export default async function ProductRange() {
   const products =[
   {
     name: "Gate Valves",
+    slug:"gate-valves",
     image: "/images/gatevalve.png",
     description: "Full-bore isolation valves for high-pressure applications",
     specs: [
@@ -78,6 +99,7 @@ export default async function ProductRange() {
   },
   {
     name: "Ball Valves",
+    slug:"ball-valves",
     image: "/images/ballvalve.png",
     description: "Quarter-turn valves for quick shut-off with low torque",
     specs: [
@@ -90,6 +112,7 @@ export default async function ProductRange() {
   },
   {
     name: "Globe Valves",
+    slug:"globe-valves",
     image: "/images/globevalve.png",
     description: "Linear motion valves for precise throttling and flow control",
     specs: [
@@ -102,6 +125,7 @@ export default async function ProductRange() {
   },
   {
     name: "Butterfly Valves",
+    slug:"butterfly-valves",
     image: "/images/butterflyvalve.png",
     description: "Compact and lightweight valves for on-off and modulating services",
     specs: [
@@ -114,6 +138,7 @@ export default async function ProductRange() {
   },
   {
     name: "Check Valves",
+    slug:"swing-check-valves",
     image: "/images/checkvalve.png",
     description: "Non-return valves for preventing backflow in pipelines",
     specs: [
@@ -126,6 +151,7 @@ export default async function ProductRange() {
   },
   {
     name: "Pressure Relief Valves",
+ 
     image: "/images/safetyvalve.png",
     description: "Safety valves designed to release excess pressure from systems",
     specs: [
@@ -182,4 +208,4 @@ export default async function ProductRange() {
       </div>
     </section>
   );
-}
+} 

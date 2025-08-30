@@ -12,7 +12,7 @@ import { useState } from "react";
 //     "gate valve, gate valves supplier, industrial gate valves, class 150 valve, class 300 valve, class 600 valve, cast steel valve, AK Valves India",
 // };
 
-export default function GateValvesPage() {
+export default function GateValveComp() {
   const [activeTab, setActiveTab] = useState("features");
 
    const categories = [

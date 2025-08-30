@@ -12,7 +12,7 @@ import Link from "next/link";
 //     "ball valve, fire safe ball valve, cryogenic ball valve, API 607, API 6FA, soft seated ball valve, metal seated ball valve, 3 way ball valve, 4 way ball valve",
 // };
 
-export default function DualPlateCheckValvesPage() {
+export default function DoubleBlockBallValveComp() {
   const [activeTab, setActiveTab] = useState("features");
    const categories = [
    { name: "Ball Valves", href: "/products/ball-valves" },
@@ -38,8 +38,8 @@ export default function DualPlateCheckValvesPage() {
         {/* Product Image */}
         <div className="mb-6">
           <Image
-            src="/images/dual-plate-check-valve-1.png"
-            alt="Dual Plate Check Valve"
+            src="/images/products/ball-valve.jpg"
+            alt="Ball Valve"
             width={400}
             height={400}
             className="rounded shadow object-contain"
@@ -47,7 +47,7 @@ export default function DualPlateCheckValvesPage() {
         </div>
 
         {/* Title */}
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">DUAL PLATE CHECK VALVES</h1>
+        <h1 className="text-3xl font-bold text-gray-900 mb-2">DOUBLE BLOCK & BLEED BALL VALVES</h1>
         <h2 className="text-xl font-semibold text-blue-700 mb-6">
           (SOFT SEATED & METAL SEATED)
         </h2>
@@ -84,15 +84,18 @@ export default function DualPlateCheckValvesPage() {
             <li>Size: 1/2″ – 12″ (15NB – 300NB)</li>
             <li>Class: 150#-2500#</li>
             <li>
-              CS / CI / SS / Alloys / Monel / Hastalloys Steel / Bronze MOC
+              CS / SS / Alloys / Monel / Hastalloys Steel / Bronze MOC
             </li>
-            <li>Self Operated</li>
+            <li>Trunion / Floating Ball, Full & Reduced Bore</li>
             <li>
-              Multi Door
+              Anti-Static Device
             </li>
-            <li>Spring Loaded / Retainer Less</li>
-            <li>Metal to Metal and Metal to soft seat</li>
-            <li>Rubber Lining on request</li>
+            <li>Blow-out Proof Stem</li>
+            <li>Fire Safe Designed</li>
+            <li>Low Emission</li>
+            <li>Actucation - Hand Lever / Gear Box / Actuator - Pneumetic, Hydraulic, Electrical
+</li>
+            <li>Speciality-Metal To Metal Seated</li>
             
 
           </ul>
@@ -103,18 +106,18 @@ export default function DualPlateCheckValvesPage() {
           <div className="overflow-x-auto">
             <ul className="list-disc pl-6 space-y-2 ">
               <li>
-                <b>Design : </b> API 6D / API 594
+                <b>Design : </b>ASME B16.34 / BS 1873
               </li>
               <li>
-                <b>Face to Face : </b>API 6D / API 594
+                <b>Face to Face : </b>ASME B16.10 / DIN IS
               </li>
               <li>
-                <b>End to End : </b>Wafer Type / Flanged
+                <b>End to End : </b>BW Type / Flanged End / RTJ
               </li>
-              {/* <li>
+              <li>
                 <b>Pressure -Temperature Rating :</b> ASTM B 16.34
-              <li>
               </li>
+              <li>
                 <b>Screwed End Dimension : </b>ASTM B 1.20.1
               </li>
               <li>
@@ -125,7 +128,7 @@ export default function DualPlateCheckValvesPage() {
               </li>
               <li>
                 <b>Fire Safe : </b>NACE MR-01-75 / 0103
-              </li> */}
+              </li>
               
             </ul>
           </div>
@@ -170,7 +173,7 @@ export default function DualPlateCheckValvesPage() {
                 key={cat.name}
                 href={cat.href}
                 className={`block px-4 py-2 rounded-md font-medium ${
-                  cat.name === "Dual Plate Check Valves"
+                  cat.name === "Double Block & Bleed Ball Valves"
                     ? "bg-blue-600 text-white"
                     : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                 }`}

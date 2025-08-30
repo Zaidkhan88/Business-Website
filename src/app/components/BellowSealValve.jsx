@@ -12,9 +12,9 @@ import Link from "next/link";
 //     "ball valve, fire safe ball valve, cryogenic ball valve, API 607, API 6FA, soft seated ball valve, metal seated ball valve, 3 way ball valve, 4 way ball valve",
 // };
 
-export default function ForgedValvesPage() {
+export default function BellowSealValve() {
   const [activeTab, setActiveTab] = useState("features");
-    const categories = [
+   const categories = [
    { name: "Ball Valves", href: "/products/ball-valves" },
     { name: "Gate Valves", href: "/products/gate-valves" },
     { name: "Globe Valves", href: "/products/globe-valves" },
@@ -38,7 +38,7 @@ export default function ForgedValvesPage() {
         {/* Product Image */}
         <div className="mb-6">
           <Image
-            src="/images/forged-valve-1.png"
+            src="/images/bellow-seal-valve-1.png"
             alt="Ball Valve"
             width={400}
             height={400}
@@ -47,10 +47,7 @@ export default function ForgedValvesPage() {
         </div>
 
         {/* Title */}
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">FORGED VALVES</h1>
-        <h2 className="text-xl font-semibold text-blue-700 mb-6">
-          (GATE / GLOBE / LIFT, SWING CHECK)
-        </h2>
+        <h1 className="text-3xl font-bold text-gray-900 mb-2">BELLOW SEALED ( GATE / GLOBE ) VALVES</h1>
 
         {/* Tabs */}
         <div className="flex space-x-4 mb-6">
@@ -81,18 +78,19 @@ export default function ForgedValvesPage() {
           <ul className="list-disc pl-6 space-y-2 ">
 
 
-            <li>Size: 1/2″ – 2″ (15NB – 50NB)</li>
-            <li>Class: 150#-2500#</li>
+            <li>Size: 1/2″ – 24″ </li>
+            <li>Class: 150#-600#</li>
             <li>
-              CS / CI / SS / Alloys / Monel / Hastalloys Steel MOC
+              CS / SS / Alloys / Monel / Hastalloys MOC 
             </li>
-            
+            <li>Hand Lever, Gear Box, Pneumatic / Electrical Actuator</li>
             <li>
-              Staight "Y" Type
+              Cycling 2000 / 10000 / 20000
             </li>
-            <li>Speciality : Below Sealed, Cryogenic and High Temp.</li>
-            <li>Metal to Metal and Metal to soft seat</li>
-            <li>Manual Operated / Pneumatic / Electrical Actuator</li>
+            <li>Actuation : Hand wheel, Gear box, Electrical & Pneumatic actuators</li>
+            <li>Service : Chlorine, Hot oil, Gas, High Temp.</li>
+            <li>Speciality : Bellow Failure Indicator on request</li>
+            <li>Bellow Construction Single Ply / Multiple Ply</li>
             
 
           </ul>
@@ -103,28 +101,26 @@ export default function ForgedValvesPage() {
           <div className="overflow-x-auto">
             <ul className="list-disc pl-6 space-y-2 ">
               <li>
-                <b>Design : </b>API 602 / BS 5352 / BS 15761
+                <b>Design : </b>ASME B16.34 / BS 5352 / API 600 / BS 1873 / API 602
               </li>
               <li>
-                <b>End Flang : </b>ASME B16.5 / B16.47 / DIN / BS IS / JIS
+                <b>Face to Face : </b>DN 3202
               </li>
               <li>
-                <b>BW End: </b>ASME B16.25
-              </li>
-                 <li>
-                <b>Socket end standard :</b> ASME B16.11
+                <b>End to End : </b>BW / Flanged
               </li>
               <li>
-                <b>Screwed ends : </b>ASME B1.20.1
+                <b>End Flange :</b> ASME B16.5 / DIN / BS / IS
               </li>
               <li>
                 <b>Test : </b>API 598 / BS 6755
+
               </li>
               <li>
-                <b>Pressure-Temperature Rating </b> : ASTM B 16.34
+                <b>Bellow : </b>Inconel / SS / Hast Alloy
               </li>
               <li>
-                <b>Speciality: </b>NACE MR-01-75
+                <b>Seat : </b>Metal to Metal / Metal to soft Seat
               </li>
               
             </ul>
@@ -170,7 +166,7 @@ export default function ForgedValvesPage() {
                 key={cat.name}
                 href={cat.href}
                 className={`block px-4 py-2 rounded-md font-medium ${
-                  cat.name === "Forged Valves"
+                  cat.name === "Bellow Seal Valves"
                     ? "bg-blue-600 text-white"
                     : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                 }`}

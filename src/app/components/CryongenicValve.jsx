@@ -12,7 +12,7 @@ import Link from "next/link";
 //     "ball valve, fire safe ball valve, cryogenic ball valve, API 607, API 6FA, soft seated ball valve, metal seated ball valve, 3 way ball valve, 4 way ball valve",
 // };
 
-export default function CryogenicValvesPage() {
+export default function CryogenicValvesComp() {
   const [activeTab, setActiveTab] = useState("features");
    const categories = [
    { name: "Ball Valves", href: "/products/ball-valves" },

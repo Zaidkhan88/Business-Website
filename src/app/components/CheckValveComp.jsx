@@ -12,7 +12,7 @@ import Link from "next/link";
 //     "ball valve, fire safe ball valve, cryogenic ball valve, API 607, API 6FA, soft seated ball valve, metal seated ball valve, 3 way ball valve, 4 way ball valve",
 // };
 
-export default function GlobeValvesPage() {
+export default function CheckValveComp() {
   const [activeTab, setActiveTab] = useState("features");
    const categories = [
    { name: "Ball Valves", href: "/products/ball-valves" },
@@ -38,8 +38,8 @@ export default function GlobeValvesPage() {
         {/* Product Image */}
         <div className="mb-6">
           <Image
-            src="/images/bellow-seal-valve-1.png"
-            alt="Ball Valve"
+            src="/images/swing-check-valve-1.png"
+            alt="Check Valve"
             width={400}
             height={400}
             className="rounded shadow object-contain"
@@ -47,7 +47,10 @@ export default function GlobeValvesPage() {
         </div>
 
         {/* Title */}
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">BELLOW SEALED ( GATE / GLOBE ) VALVES</h1>
+        <h1 className="text-3xl font-bold text-gray-900 mb-2">CHECK VALVES</h1>
+        <h2 className="text-xl font-semibold text-blue-700 mb-6">
+          (BOLTED BONNET & PRESSURE SEAL COVER)
+        </h2>
 
         {/* Tabs */}
         <div className="flex space-x-4 mb-6">
@@ -78,21 +81,18 @@ export default function GlobeValvesPage() {
           <ul className="list-disc pl-6 space-y-2 ">
 
 
-            <li>Size: 1/2″ – 24″ </li>
-            <li>Class: 150#-600#</li>
+            <li>Size: 1/2″ – 36″ (15NB – 500NB)</li>
+            <li>Class: 150#-2500#</li>
             <li>
-              CS / SS / Alloys / Monel / Hastalloys MOC 
+              CS / SS / Alloys / Monel / Hastalloys / Bronze MOC
             </li>
-            <li>Hand Lever, Gear Box, Pneumatic / Electrical Actuator</li>
+            <li>Non Slam arrangement on request</li>
             <li>
-              Cycling 2000 / 10000 / 20000
+              Wafer Type / Ball Type / Piston Type / Spring Loaded
             </li>
-            <li>Actuation : Hand wheel, Gear box, Electrical & Pneumatic actuators</li>
-            <li>Service : Chlorine, Hot oil, Gas, High Temp.</li>
-            <li>Speciality : Bellow Failure Indicator on request</li>
-            <li>Bellow Construction Single Ply / Multiple Ply</li>
+            <li>Metal to Metal and Metal to soft seat</li>
+            <li>Rubber Lining on request</li>
             
-
           </ul>
         )}
 
@@ -101,26 +101,28 @@ export default function GlobeValvesPage() {
           <div className="overflow-x-auto">
             <ul className="list-disc pl-6 space-y-2 ">
               <li>
-                <b>Design : </b>ASME B16.34 / BS 5352 / API 600 / BS 1873 / API 602
+                <b>Design : </b>ASME B16.34 / BS 1868
               </li>
               <li>
-                <b>Face to Face : </b>DN 3202
+                <b>Face to Face : </b>ASME B16.10 / DIN IS / BS
               </li>
               <li>
-                <b>End to End : </b>BW / Flanged
+                <b>End to End : </b>BW Type / Flanged End / RTJ
               </li>
               <li>
-                <b>End Flange :</b> ASME B16.5 / DIN / BS / IS
+                <b>Pressure -Temperature Rating :</b> ASTM B 16.34
+              </li>
+              <li>
+                <b>Screwed End Dimension : </b>ASTM B 1.20.1
+              </li>
+              <li>
+                <b>BW End : </b>ASME B16.25
               </li>
               <li>
                 <b>Test : </b>API 598 / BS 6755
-
               </li>
               <li>
-                <b>Bellow : </b>Inconel / SS / Hast Alloy
-              </li>
-              <li>
-                <b>Seat : </b>Metal to Metal / Metal to soft Seat
+                <b>Special : </b>NACE MR-01-75 / 0103
               </li>
               
             </ul>
@@ -158,7 +160,7 @@ export default function GlobeValvesPage() {
       </section>
 
       {/* Right Sidebar */}
-       <aside className="  rounded-lg p-4 shadow-sm">
+       <aside className="bg-gray-50 border rounded-lg p-4 shadow-sm">
           <h3 className="text-lg font-semibold mb-4">Other Valves</h3>
           <nav className="space-y-2">
             {categories.map((cat) => (
@@ -166,7 +168,7 @@ export default function GlobeValvesPage() {
                 key={cat.name}
                 href={cat.href}
                 className={`block px-4 py-2 rounded-md font-medium ${
-                  cat.name === "Bellow Seal Valves"
+                  cat.name === "Swing Check Valves"
                     ? "bg-blue-600 text-white"
                     : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                 }`}

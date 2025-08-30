@@ -12,9 +12,9 @@ import Link from "next/link";
 //     "ball valve, fire safe ball valve, cryogenic ball valve, API 607, API 6FA, soft seated ball valve, metal seated ball valve, 3 way ball valve, 4 way ball valve",
 // };
 
-export default function GlobeValvesPage() {
+export default function ForgedValvesComp() {
   const [activeTab, setActiveTab] = useState("features");
-   const categories = [
+    const categories = [
    { name: "Ball Valves", href: "/products/ball-valves" },
     { name: "Gate Valves", href: "/products/gate-valves" },
     { name: "Globe Valves", href: "/products/globe-valves" },
@@ -38,7 +38,7 @@ export default function GlobeValvesPage() {
         {/* Product Image */}
         <div className="mb-6">
           <Image
-            src="/images/products/ball-valve.jpg"
+            src="/images/forged-valve-1.png"
             alt="Ball Valve"
             width={400}
             height={400}
@@ -47,9 +47,9 @@ export default function GlobeValvesPage() {
         </div>
 
         {/* Title */}
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">DOUBLE BLOCK & BLEED BALL VALVES</h1>
+        <h1 className="text-3xl font-bold text-gray-900 mb-2">FORGED VALVES</h1>
         <h2 className="text-xl font-semibold text-blue-700 mb-6">
-          (SOFT SEATED & METAL SEATED)
+          (GATE / GLOBE / LIFT, SWING CHECK)
         </h2>
 
         {/* Tabs */}
@@ -81,21 +81,18 @@ export default function GlobeValvesPage() {
           <ul className="list-disc pl-6 space-y-2 ">
 
 
-            <li>Size: 1/2″ – 12″ (15NB – 300NB)</li>
+            <li>Size: 1/2″ – 2″ (15NB – 50NB)</li>
             <li>Class: 150#-2500#</li>
             <li>
-              CS / SS / Alloys / Monel / Hastalloys Steel / Bronze MOC
+              CS / CI / SS / Alloys / Monel / Hastalloys Steel MOC
             </li>
-            <li>Trunion / Floating Ball, Full & Reduced Bore</li>
+            
             <li>
-              Anti-Static Device
+              Staight "Y" Type
             </li>
-            <li>Blow-out Proof Stem</li>
-            <li>Fire Safe Designed</li>
-            <li>Low Emission</li>
-            <li>Actucation - Hand Lever / Gear Box / Actuator - Pneumetic, Hydraulic, Electrical
-</li>
-            <li>Speciality-Metal To Metal Seated</li>
+            <li>Speciality : Below Sealed, Cryogenic and High Temp.</li>
+            <li>Metal to Metal and Metal to soft seat</li>
+            <li>Manual Operated / Pneumatic / Electrical Actuator</li>
             
 
           </ul>
@@ -106,28 +103,28 @@ export default function GlobeValvesPage() {
           <div className="overflow-x-auto">
             <ul className="list-disc pl-6 space-y-2 ">
               <li>
-                <b>Design : </b>ASME B16.34 / BS 1873
+                <b>Design : </b>API 602 / BS 5352 / BS 15761
               </li>
               <li>
-                <b>Face to Face : </b>ASME B16.10 / DIN IS
+                <b>End Flang : </b>ASME B16.5 / B16.47 / DIN / BS IS / JIS
               </li>
               <li>
-                <b>End to End : </b>BW Type / Flanged End / RTJ
+                <b>BW End: </b>ASME B16.25
+              </li>
+                 <li>
+                <b>Socket end standard :</b> ASME B16.11
               </li>
               <li>
-                <b>Pressure -Temperature Rating :</b> ASTM B 16.34
-              </li>
-              <li>
-                <b>Screwed End Dimension : </b>ASTM B 1.20.1
-              </li>
-              <li>
-                <b>BW End : </b>ASME B16.25
+                <b>Screwed ends : </b>ASME B1.20.1
               </li>
               <li>
                 <b>Test : </b>API 598 / BS 6755
               </li>
               <li>
-                <b>Fire Safe : </b>NACE MR-01-75 / 0103
+                <b>Pressure-Temperature Rating </b> : ASTM B 16.34
+              </li>
+              <li>
+                <b>Speciality: </b>NACE MR-01-75
               </li>
               
             </ul>
@@ -173,7 +170,7 @@ export default function GlobeValvesPage() {
                 key={cat.name}
                 href={cat.href}
                 className={`block px-4 py-2 rounded-md font-medium ${
-                  cat.name === "Double Block & Bleed Ball Valves"
+                  cat.name === "Forged Valves"
                     ? "bg-blue-600 text-white"
                     : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                 }`}

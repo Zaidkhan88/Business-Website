@@ -9,8 +9,8 @@ import 'swiper/css';
 import 'swiper/css/autoplay';
 
 const slides = [
-  "/images/image-valve-1.jpg",
-  "/images/image-valve-2.jpg",
+  // "/images/image-valve-1.jpg",
+  // "/images/image-valve-2.jpg",
   "/images/image-valve-3.png",
   "/images/image-valve-4.png",
   "/images/image-valve-5.png",
@@ -34,7 +34,7 @@ const HeroCarousel = () => {
       >
         {slides.map((src, index) => (
           <SwiperSlide key={index}>
-            <div className="relative w-full h-[400px] md:h-[500px]">
+            <div className="relative w-full aspect-[16/9] ">
               <Image
                 src={src}
                 alt={`Hero banner image ${index + 1}`}

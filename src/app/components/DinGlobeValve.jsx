@@ -12,9 +12,9 @@ import Link from "next/link";
 //     "ball valve, fire safe ball valve, cryogenic ball valve, API 607, API 6FA, soft seated ball valve, metal seated ball valve, 3 way ball valve, 4 way ball valve",
 // };
 
-export default function ButterflyValvesPage() {
+export default function DINGlobeValvesComp() {
   const [activeTab, setActiveTab] = useState("features");
-   const categories = [
+     const categories = [
    { name: "Ball Valves", href: "/products/ball-valves" },
     { name: "Gate Valves", href: "/products/gate-valves" },
     { name: "Globe Valves", href: "/products/globe-valves" },
@@ -30,7 +30,6 @@ export default function ButterflyValvesPage() {
     { name: "Piston Valves", href: "/products/piston-valves" },
     { name: "DIN Globe Valves", href: "/products/din-globe-valves" },
   ];
-
   return (
     <main className="flex max-w-7xl mx-auto px-6 py-12 gap-8">
       {/* Left content */}
@@ -38,7 +37,7 @@ export default function ButterflyValvesPage() {
         {/* Product Image */}
         <div className="mb-6">
           <Image
-            src="/images/butterfly-valve-1.png"
+            src="/images/din-globe-valve-1.png"
             alt="Ball Valve"
             width={400}
             height={400}
@@ -47,10 +46,7 @@ export default function ButterflyValvesPage() {
         </div>
 
         {/* Title */}
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">BUTTERFLY VALVES</h1>
-        <h2 className="text-xl font-semibold text-blue-700 mb-6">
-          ( SOFT SEATED & METAL SEATED )
-        </h2>
+        <h1 className="text-3xl font-bold text-gray-900 mb-2">DIN GLOBE VALVES</h1>
 
         {/* Tabs */}
         <div className="flex space-x-4 mb-6">
@@ -81,17 +77,21 @@ export default function ButterflyValvesPage() {
           <ul className="list-disc pl-6 space-y-2 ">
 
 
-            <li>Size: 1/2″ – 36″ (15NB – 900NB)</li>
-            <li>Class: 150#-600#. PN10, PN16, PN25, PN40</li>
+            <li>Size: 1/2″ – 16″ (15NB – 400NB)</li>
+            <li>Class: PN 6 -PN 320</li>
             <li>
-              CS / SS / Alloys / Monel / Hastalloys / Bronze MOC
+              CS / CI / SS / Alloys / Monel / Hastalloys Steel / Bronze MOC
             </li>
-            <li>Actucation - Hand Lever / Gear Box / Actuator - Pneumetic, Hydraulic, Electrical</li>
+            <li>Y Type and Angle Type Construction</li>
             <li>
-              Wafer Type / Lug Type / Flange ends types
+              Plug Design - Regulating Disc, Soft Seat, Throtting Type Guided Disc
+
             </li>
-            <li>EPDM / Nitrile / PTFE / Rubber Lined & Seated</li>
-            <li>Metal to Metal and Metal to soft seat</li>
+            <li>Removable Plug Design</li>
+            <li>High Temperature , Cryogenic services.</li>
+            <li>Low emission</li>
+            <li>Actuation : Hand wheel / Gear Box / Electric Actuators</li>
+            <li>Speciality : Bellow Sealed Arrangement</li>
             
 
           </ul>
@@ -102,31 +102,29 @@ export default function ButterflyValvesPage() {
           <div className="overflow-x-auto">
             <ul className="list-disc pl-6 space-y-2 ">
               <li>
-                <b>Design : </b>API 609 , ANSI B16.34 , BS 5155
+                <b>Design : </b>ASME B16.34 / DIN 3356
               </li>
               <li>
-                <b>Face to Face : </b>API 609 , BS 5155 , ANSI B16.10
+                <b>Face to Face : </b>DIN 3202
               </li>
               <li>
-                <b>End to End : </b>Wafer, Lugged, Flanged
+                <b>End to End : </b>BW Type / Flanged End / RTJ
               </li>
               <li>
-                <b>Test : </b>API 598, BS 5155
+                <b>End Flange :</b> ASME B16.5 / DIN / BS / IS
+              </li>
+              
+              <li>
+                <b>BW End : </b>ASME B16.25
               </li>
               <li>
-                <b>Fire Safe :</b> API 607
+                <b>Test : </b>BS 6755-1 / API 598
               </li>
               <li>
-                <b>Special : </b>NACE MR-01-75 / 0103
+                <b>Pneumatic Test : </b>As per Client Specification
               </li>
               <li>
-                <b>Mounting Flang  : </b>ISO5211
-              </li>
-              <li>
-                <b>Application : </b>Pneumatic / Electrical HVAC, Water Supply & Sewag, Food & Beverage, Chemical / Petrochemical / Processing, Power and Utilities, Paper and Pulp, Ship Building and steam.
-              </li>
-              <li>
-                <b>Speciality : </b> Double Offset / Tripal Offset.
+                <b>Special : </b>NACE MR-01-75
               </li>
               
             </ul>
@@ -172,7 +170,7 @@ export default function ButterflyValvesPage() {
                 key={cat.name}
                 href={cat.href}
                 className={`block px-4 py-2 rounded-md font-medium ${
-                  cat.name === "Butterfly Valves"
+                  cat.name === "DIN Globe Valves"
                     ? "bg-blue-600 text-white"
                     : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                 }`}
