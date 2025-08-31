@@ -13,7 +13,7 @@ const AboutPreview = () => {
   ];
 
   return (
-    <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+    <section className="bg-gray-50 lg:py-12 px-4 sm:py-12 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <header className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
@@ -56,12 +56,12 @@ const AboutPreview = () => {
                 </div>
               ))}
             </div>
-            <Link 
+            {/* <Link 
               href="/about" 
               className="mt-6 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors"
             >
               Our Full Story →
-            </Link>
+            </Link> */}
           </div>
         </div>
 

@@ -2,33 +2,66 @@ import { Metadata } from 'next';
 import QuoteForm from '../components/QuoteForm';
 import { Phone, Mail, MessageCircle } from 'lucide-react';
 
+// app/contact/page.tsx
+// import type { Metadata } from "next";
+
 export const metadata = {
-  title: 'Contact Us | AK Valves',
+  title: "Contact Us | AK Valves",
   description:
-    'Contact AK Valves for industrial valve solutions. Get quick quotes, connect via phone, WhatsApp, or email for reliable supply.',
+    "Get in touch with AK Valves for high-quality industrial valves including gate, ball, and check valves. Reach us via phone, email, or our contact form.",
   keywords: [
-    'AK Valves',
-    'valve supplier India',
-    'industrial valves quote',
-    'buy valves online',
-    'contact valve company',
+    "AK Valves contact",
+    "industrial valves supplier",
+    "ball valves",
+    "gate valves",
+    "check valves",
+    "globe valves",
+    "safety valves",
+    "strainers",
+    "bluedown valves",
+    "cryogenic valves",
+    "bellow seal valves",
+    "dual plate check valves",
+    "valve manufacturer",
   ],
-  openGraph: {
-    title: 'Contact AK Valves',
-    description: 'Reach out to AK Valves for all your valve needs. Quick response via form, phone, or WhatsApp.',
-    url: 'https://yourdomain.com/contact',
-    siteName: 'AK Valves',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Contact AK Valves',
-    description: 'Send us a quote request or drop a message – we’re quick to respond.',
-    images: ['/images/og-image.jpg'],
+  authors: [{ name: "AK Valves" }],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
   },
   alternates: {
-    canonical: 'https://yourdomain.com/contact',
+    canonical: "https://www.akvalves.com/contact",
   },
+  openGraph: {
+    title: "Contact AK Valves",
+    description:
+      "Reach out to AK Valves for expert valve solutions. Contact us via phone, email, or form.",
+    url: "https://www.akvalves.com/contact",
+    siteName: "AK Valves",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact AK Valves",
+    description:
+      "Get in touch with AK Valves for premium industrial valves and support.",
+    creator: "@akvalves",
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  category: "Industrial Valves",
 };
+
 
 export default function ContactPage() {
   return (

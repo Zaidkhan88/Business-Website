@@ -40,7 +40,30 @@ const productComponents = {
 //   "":,
 
 };
+export async function generateMetadata({ params }) {
+  const { product } = await params; // ✅ no await
 
+  // Ideally fetch product details from your DB or API
+  // Example: const product = await getProduct(productSlug);
+
+  return {
+    title: `${product.replace(/-/g, " ")} | My Business Website`,
+    description: `Learn more about ${product.replace(/-/g, " ")}. Find specifications, features, and details for ${product}.`,
+    keywords: `${product}, industrial valves, buy ${product},competitive price, best ${product}`,
+    openGraph: {
+      title: `${product.replace(/-/g, " ")} | My Business Website`,
+      description: `Find details, specifications, and benefits of ${product.replace(/-/g, " ")}.`,
+      url: `https://yourdomain.com/products/${product}`,
+      siteName: "My Business Website",
+      // type: "product",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${product.replace(/-/g, " ")} | My Business Website`,
+      description: `Explore ${product.replace(/-/g, " ")} – full product specifications and features.`,
+    },
+  };
+}
 export default async function ProductPage({ params }) {
   const { product } = await params;
 

@@ -55,12 +55,60 @@ const products = [
 ];
 
 export const metadata = {
-  title: "Our Products | AK Valves",
+  title: "Industrial Valves | Ball, Gate, Globe, Check, Butterfly | AK Valves",
   description:
-    "Explore a wide range of industrial valves including Ball Valves, Gate Valves, Globe Valves, Check Valves, Butterfly Valves, Strainers and more.",
-  keywords:
-    "ball valve, gate valve, globe valve, check valve, butterfly valve, strainer, industrial valves, AK Valves India",
+    "Browse AK Valves’ complete range of industrial valves including Ball, Gate, Globe, Check, Butterfly Valves, Strainers, and more. High-quality API & ASME-certified products.",
+  keywords: [
+    "industrial valves",
+    "industrial valve supplier",
+    "gate valves",
+    "ball valves",
+    "check valves",
+    "globe valves",
+    "safety valves",
+    "strainers",
+    "bluedown valves",
+    "cryogenic valves",
+    "bellow seal valves",
+    "dual plate check valves",
+    "valve dealer India",
+    "valve stockist India",
+    "API valves",
+    "ASME valves",
+  ],
+  alternates: {
+    canonical: "https://www.akvalves.com/products",
+  },
+  openGraph: {
+    title: "Industrial Valves | AK Valves",
+    description:
+      "Explore our range of industrial valves including Ball, Gate, Globe, Check, Butterfly, and Strainers. API & ASME-certified products for global industries.",
+    url: "https://www.akvalves.com/products",
+    siteName: "AK Valves",
+    type: "website",
+    images: [
+      {
+        url: "/images/og-products.jpg", // Add a products OG image
+        width: 1200,
+        height: 630,
+        alt: "AK Valves Industrial Products",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Our Products | AK Valves",
+    description:
+      "Browse high-quality industrial valves including Ball, Gate, Globe, Check, Butterfly valves, and strainers.",
+    images: ["/images/og-products.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
+
+
 
 export default function ProductsPage() {
   return (

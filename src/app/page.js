@@ -5,26 +5,29 @@ export const metadata = {
   description:
     "Leading manufacturer of gate, globe, ball, butterfly, and check valves. API and ASME-certified products for oil & gas, power plants, and more.",
   keywords: [
-    "Industrial valves",
-    "Gate valves",
-    "Ball valves",
-    "API 600",
-    "ASME B16.34",
-    "Check valves",
-    "Butterfly valves",
-    "Globe valves",
-    "Valve manufacturer",
+    "Industrial valves manufacturer",
+    "Gate valves supplier",
+    "Ball valves API 600",
+    "ASME B16.34 valves",
+    "Check valves manufacturer",
+    "Butterfly valves exporter",
+    "Globe valves India",
+    "Valve manufacturer oil and gas",
     "High pressure valves",
   ],
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
     title: "Industrial Valve Solutions | Certified Valve Manufacturer",
     description:
       "Browse our range of high-performance industrial valves for oil & gas, water treatment, and power plants.",
-    url: "https://yourdomain.com", // replace with your real domain
+    url: "https://yourdomain.com",
     siteName: "Your Brand Name",
     images: [
       {
-        url: "/images/og-image.jpg", // provide a proper OG image path
+        url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Industrial Valves",

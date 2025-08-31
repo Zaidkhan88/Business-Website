@@ -26,7 +26,7 @@ const WhyChooseUs = () => {
 
   return (
     <section 
-      className="bg-white py-12 px-4 sm:px-6 lg:px-8"
+      className="bg-gray-50 lg:py-12 px-4 sm:py-12 sm:px-6 lg:px-8"
       aria-labelledby="why-choose-us-heading"
       itemScope
       itemType="https://schema.org/ItemList"

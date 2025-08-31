@@ -1,26 +1,58 @@
-// import  { Metadata } from 'next';
+// app/about/page.jsx
 
-// export const metadata = {
-//   title: 'About Us | AK Valves',
-//   description:
-//     'With over 26 years in the valve industry, AK Valves provides certified industrial valves and builds long-term client relationships across India.',
-//   keywords: [
-//     'industrial valves',
-//     'valve supplier',
-//     'gate valves',
-//     'ball valves',
-//     'Mumbai valve company',
-//     'trusted valve distributor',
-//   ],
-//   openGraph: {
-//     title: 'About AK Valves',
-//     description:
-//       'Get to know AK Valves – India’s trusted partner for industrial valve solutions. See our journey and values.',
-//     url: 'https://yourdomain.com/about',
-//     siteName: 'AK Valves',
-//   },
-// };
-
+export const metadata = {
+  title: "About Us | AK Valves - Trusted Industrial Valve Manufacturer",
+  description:
+    "AK Valves has been a trusted name in the industrial valve industry since 2004. We manufacture and supply gate, globe, ball, butterfly, and check valves across India and globally.",
+  keywords: [
+    "AK Valves",
+    "about AK Valves",
+    "valve dealer India",
+    "industrial valves supplier",
+    "gate valves",
+    "ball valves",
+    "check valves",
+    "globe valves",
+    "safety valves",
+    "strainers",
+    "bluedown valves",
+    "cryogenic valves",
+    "bellow seal valves",
+    "dual plate check valves",
+    "valve manufacturer",
+    "butterfly valves",
+    "Mumbai valve company",
+    "valve distributor India",
+    "valve supplier",
+    "valve stockist",
+  ],
+  openGraph: {
+    title: "About AK Valves - Industrial Valve Manufacturer in India",
+    description:
+      "Learn about AK Valves’ 20+ years of expertise in delivering high-quality industrial valves with a customer-first approach.",
+    url: "https://yourdomain.com/about",
+    siteName: "AK Valves",
+    images: [
+      {
+        url: "/images/about-og.jpg", // optional, create one for About page
+        width: 1200,
+        height: 630,
+        alt: "About AK Valves",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About AK Valves | Trusted Valve Supplier",
+    description:
+      "Discover AK Valves’ journey, mission, and why industries across India trust us for reliable valve solutions.",
+    images: ["/images/about-og.jpg"],
+  },
+  alternates: {
+    canonical: "https://yourdomain.com/about",
+  },
+};
 
 
 import { Mail, Phone, ArrowRight } from "lucide-react";
